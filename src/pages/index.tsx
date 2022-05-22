@@ -7,9 +7,11 @@ import {
   FormControl,
   FormHelperText,
   FormLabel,
+  Heading,
   Input,
   Text,
 } from '@chakra-ui/react';
+import { Card, ListCard } from '../components';
 
 const Home: NextPage = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -40,6 +42,12 @@ const Home: NextPage = () => {
 
         <Text>{state}</Text>
       </Box>
+
+      <Box py="1rem">
+        <Heading>My NFT</Heading>
+      </Box>
+
+      <ListCard></ListCard>
     </Container>
   );
 };
