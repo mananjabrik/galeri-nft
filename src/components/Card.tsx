@@ -1,10 +1,8 @@
 import React from 'react';
-import { Box, Text, Image, Heading } from '@chakra-ui/react';
+import { Box, Text, Image, Heading, ListProps } from '@chakra-ui/react';
+import { MetaData } from './ListCard';
 
-interface CardProps {
-  name: string;
-  description: string;
-}
+interface CardProps extends MetaData {}
 
 export const Card: React.FC<CardProps> = (props) => {
   const { name, description } = props;

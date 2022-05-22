@@ -16,6 +16,7 @@ import { Card, ListCard } from '../components';
 const Home: NextPage = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [state, setState] = useState('');
+  const [nfts, setNfts] = useState([]);
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -46,8 +47,7 @@ const Home: NextPage = () => {
       <Box py="1rem">
         <Heading>My NFT</Heading>
       </Box>
-
-      <ListCard></ListCard>
+      {nfts.length > 0 && <ListCard nfts={nfts} />}
     </Container>
   );
 };
