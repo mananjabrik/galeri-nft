@@ -17,7 +17,10 @@ const Home: NextPage = () => {
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setState(inputRef.current?.value!);
+    const address = inputRef.current?.value!;
+    setState(address);
+
+    e.currentTarget.reset();
   };
 
   return (
