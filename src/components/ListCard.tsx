@@ -3,9 +3,11 @@ import React from 'react';
 import { Card } from './Card';
 
 export interface ListCardProps {
-  id: string;
-  name: string;
+  description: string;
+  external_url: string;
   image: string;
+  name: string;
+  attributes: [];
 }
 
 interface MetaData {
