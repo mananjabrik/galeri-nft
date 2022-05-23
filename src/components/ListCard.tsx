@@ -18,7 +18,7 @@ export const ListCard: React.FC<ListCardProps> = ({ nfts }) => {
   return (
     <Wrap>
       {nfts?.map((nft, idx) => (
-        <WrapItem width="45%" key={idx}>
+        <WrapItem key={idx}>
           <Card image={nft.image} name={nft.name}></Card>
         </WrapItem>
       ))}

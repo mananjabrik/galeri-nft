@@ -1,5 +1,12 @@
 import React from 'react';
-import { Box, Text, Image, Heading, ListProps } from '@chakra-ui/react';
+import {
+  Box,
+  Text,
+  Image,
+  Heading,
+  ListProps,
+  AspectRatio,
+} from '@chakra-ui/react';
 import { MetaData } from './ListCard';
 
 interface CardProps extends MetaData {}
@@ -15,10 +22,13 @@ export const Card: React.FC<CardProps> = (props) => {
         rounded="lg"
         overflow="hidden"
       >
-        <Image
-          src={image ?? 'https://w.wallhaven.cc/full/1k/wallhaven-1ky369.jpg'}
-          alt="NFT"
-        ></Image>
+        <AspectRatio w="20rem" ratio={1}>
+          <Image
+            w="full"
+            src={image ?? 'https://w.wallhaven.cc/full/1k/wallhaven-1ky369.jpg'}
+            alt="NFT"
+          ></Image>
+        </AspectRatio>
         <Box p="4">
           <Heading size="lg">{name}</Heading>
           <Text>{description}</Text>
