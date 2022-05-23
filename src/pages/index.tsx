@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import type { NextPage } from 'next';
-import { ethers, utils } from 'ethers';
+import { ethers } from 'ethers';
 import axios from 'axios';
 import {
   Box,
@@ -15,41 +15,6 @@ import {
 } from '@chakra-ui/react';
 import { abi } from '../components/abi';
 import { ListCard } from '../components';
-
-// const abi = [
-//   'function verifyString(string, uint8, bytes32, bytes32) public pure returns (address)',
-// ];
-
-// const provider = ethers.getDefaultProvider('ropsten');
-// const contractAddress = '0x80F85dA065115F576F1fbe5E14285dA51ea39260';
-//   const contract = new ethers.Contract(contractAddress, abi, provider);
-
-// export const verifySignature = async (
-//   message: string,
-//   flatSig: string,
-//   address: string
-// ) => {
-//   try {
-//     const sig = ethers.utils.splitSignature(flatSig);
-//     const recovered = await contract.verifyString(message, sig.v, sig.r, sig.s);
-//     return compareAddress(recovered, address);
-//   } catch (error) {
-//     return false;
-//   }
-// };
-
-// export const getWalletAddressBySig = async (
-//   message: string,
-//   flatSig: string
-// ) => {
-//   try {
-//     const sig = ethers.utils.splitSignature(flatSig);
-//     const recovered = await contract.verifyString(message, sig.v, sig.r, sig.s);
-//     return recovered;
-//   } catch (error) {
-//     return '';
-//   }
-// };
 
 const Home: NextPage = () => {
   const contracAddressRef = useRef<HTMLInputElement>(null);
