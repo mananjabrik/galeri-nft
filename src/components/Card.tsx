@@ -5,7 +5,7 @@ import { MetaData } from './ListCard';
 interface CardProps extends MetaData {}
 
 export const Card: React.FC<CardProps> = (props) => {
-  const { name, description } = props;
+  const { name, description, image } = props;
   return (
     <Box p="3">
       <Box
@@ -16,7 +16,7 @@ export const Card: React.FC<CardProps> = (props) => {
         overflow="hidden"
       >
         <Image
-          src="https://w.wallhaven.cc/full/1k/wallhaven-1ky369.jpg"
+          src={image ?? 'https://w.wallhaven.cc/full/1k/wallhaven-1ky369.jpg'}
           alt="NFT"
         ></Image>
         <Box p="4">
